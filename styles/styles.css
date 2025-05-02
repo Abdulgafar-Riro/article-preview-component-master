@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 340px;
+  max-height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 3rem;
+  position: relative;
+}
+.card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card__body {
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.card__content {
+  padding: 2rem;
+}
+.card__title {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 15px;
+}
+.card__text {
+  font-size: 0.9rem;
+  width: 34.5ch;
+  color: hsl(214, 17%, 51%);
+  line-height: 1.5;
+}
+.card__footer {
+  background: #ffffff;
+  padding: 0 2rem 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__share {
+  background: hsl(217, 19%, 35%);
+  padding: 1rem 2rem 2rem 2rem;
+  margin-top: -4rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+.card__share span {
+  letter-spacing: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: hsl(212, 23%, 69%);
+}
+.card__share img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+.card__author .author__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.card__author .author__info .author__name {
+  font-size: 14px;
+  color: hsl(217, 19%, 35%);
+}
+.card__author .author__info .author__date {
+  font-size: 12px;
+  color: hsl(212, 23%, 69%);
+}
+
+.share__btn {
+  background: hsl(210, 46%, 95%);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.share__btn img {
+  width: 15px;
+}
+.share__btn.active {
+  background: hsl(214, 17%, 51%);
+}
+.share__btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+.share__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 750px) {
+  .card {
+    max-width: 650px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: visible;
+  }
+  .card__image img {
+    height: 100%;
+    border-radius: 10px;
+  }
+  .card__body {
+    margin: 0;
+    margin-left: -62px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+  }
+  .card__content {
+    padding: 0rem;
+  }
+  .card__title {
+    font-size: 1.15rem;
+    width: 30ch;
+  }
+  .card__text {
+    font-size: 0.75rem;
+    width: 50ch;
+  }
+  .card__footer {
+    padding-top: 2rem;
+    padding: 0;
+    justify-content: space-between;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    position: relative;
+    bottom: -1rem;
+    right: 0;
+  }
+  .card__share {
+    position: absolute;
+    bottom: 30%;
+    right: -4.8rem;
+    border-radius: 10px;
+    padding: 15px 34px;
+  }
+  .card__share img {
+    width: 20px;
+  }
+  .card__share-arrow {
+    position: absolute;
+    bottom: -10px; /* move arrow below box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%); /* color of box */
+  }
+  .card .hidden {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
